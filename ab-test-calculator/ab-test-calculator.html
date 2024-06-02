@@ -1,0 +1,536 @@
+<style>
+/*deactivate elementor css*/
+.elementor-kit-2479 input:not([type="button"]):not([type="submit"]), .elementor-kit-2479 textarea, .elementor-kit-2479 .elementor-field-textual {
+  border-style: none;
+  padding: 4px 0px 4px 0px;
+}
+/*end elementor css*/
+
+
+.calculator{
+display:grid;
+grid-template-columns:2fr 1fr;
+margin:auto;
+background-color: transparent !important;
+grid-column-gap:100px;
+padding:75px;
+border-radius:15px;
+/*border: 1px solid;*/
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  background-image: linear-gradient(#ff4500, #ff4500);
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #FF5C00 !important;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background .3s ease-in-out;    
+  border: none;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #FF5C00 !important;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background .3s ease-in-out;
+}
+
+input[type=range]::-webkit-slider-runnable-track  {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+.hr-class {
+    margin-top: 30px;
+    width: 25%;
+}
+
+.ab-test {
+    padding-bottom: 10px
+}
+
+.calculator-tool {
+    margin-top: -30px;
+    font-family: 'Outfit';
+    font-size: 14px;
+    font-weight: 300;
+    color: #A1A1A1;
+    line-height: 16px;
+}
+
+.revenue-label {
+  border-radius: 25px !important;
+}
+
+fieldset.calculator__radios {
+    margin: 0;
+    padding: 0;
+    border-radius: 50px;
+    border: 1px solid #ffffff;
+}
+
+.arrowrightsvg{
+margin-left:15px;
+z-index:3;
+}
+
+.form-range{
+background: #FF5C00;
+}
+
+
+.radios__box{
+border-radius:25px;
+margin: 0px 0px;
+}
+
+label{
+margin:0px;
+}
+
+input[type="radio"]:checked + .revenue-label{
+background-color:#FEFFA1 !important;
+color: #000000 !important;
+}
+
+.revenue-radio{
+display:none;
+}
+
+.revenue-label{
+padding: 16px 28px;
+font-family: 'Outfit' !important;
+color: #ffffff !important;
+background-color:transparent;
+font-size:18px;
+cursor:pointer;
+}
+
+
+.cta.outlined.oncalc{
+margin:0px;
+margin-top:30px;
+z-index:10;
+color:white;
+}
+
+.calculator__result{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:flex-start;
+}
+
+.calcdisclaim{
+font-size:.75rem;
+font-family:'Outfit';
+font-weight:300;
+color:white;
+}
+
+.werun{
+font-family:'Outfit';
+font-size:1.25rem;
+color:white;
+letter-spacing:0.5px;
+font-weight:300;
+padding-bottom:0px;
+margin-bottom:0px;
+}
+
+
+.singlesuccess{
+font-family:'Outfit';
+font-size: 18px;
+font-weight:300;
+color:white;
+margin-bottom:1.25rem;
+letter-spacing:0.5px;
+padding-top: 15px;
+}
+
+.calculator__revenue{
+display:flex;
+align-items:center;
+justify-content:space-between;
+font-family:'Outfit';
+font-size:1.5rem;
+font-weight:600;
+text-transform:none;
+color:white;
+margin-bottom: 1rem;
+}
+
+.field-label {
+font-family:'Outfit' !important;
+font-size: 14px;
+font-weight: 300;
+line-height: 18px;
+text-align: left;
+color: #ffffff !important;
+}
+
+.usd {
+font-family: Outfit;
+font-size: 25px;
+font-weight: 400;
+}
+
+.rangevalue{
+font-family:'Outfit';
+font-weight:600;
+color:white;
+font-size:1rem;
+}
+
+.calculator__field{
+margin-bottom:2.5rem;
+}
+
+.calculator__field-box{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.form-range{
+width:100%;
+}
+
+.calculator__fields{
+width:100%;
+}
+
+.usd-per {
+font-family: Outfit;
+font-size: 25px;
+font-weight: 400;
+color: #FEFFA1;
+}
+
+@media screen and (max-width:1030px){
+.calculator{
+grid-template-columns:2fr 1fr;
+padding:2.5rem;
+grid-column-gap:5rem;
+}
+
+.rangevalue{
+font-size:1rem;
+}
+
+.werun{
+font-size:1rem;
+}
+
+.singlesuccess{
+font-size:1rem;
+}
+
+.range-value{
+font-size:1rem;
+}
+
+.annual-revenue{
+font-size:1rem;
+}
+
+.field-label {
+
+}
+
+.usd {
+    font-size: 1rem;
+}
+.calculator__revenue{
+font-size:3rem;
+}
+.calculator {
+    display: block !important;
+}
+.calculator__result{
+align-items: center;
+}
+.calculator__revenue {
+    margin-top: -40px !important;
+}
+p.singlesuccess {
+    text-align: center;
+    padding-top: 5px;
+}
+}
+
+@media screen and (max-width:768px){
+.calculator{
+max-width:100%;
+grid-template-columns:100%;
+grid-template-rows:1fr 1fr;
+}
+
+.calculator-tool {
+    margin-top: -40px;
+}
+.ab-test {
+    padding-top: 10px;
+    padding-bottom: 15px
+}
+}
+
+
+@media screen and (max-width:630px){
+.calculator{
+background-color:#000000;
+padding:0rem;
+}
+.approx-annual-left {
+    display: flex
+}
+.approx-annual-right {
+    display: flex;
+    justify-content: flex-end;
+}
+.calculator__revenue {
+    padding-top: 20px !important;
+}
+.hr-class {
+    margin-top: 20px;
+    padding-bottom: 5px;
+}
+.werun{
+    margin-top: -15px;
+    padding-bottom: 10px;
+}
+.calculator-tool {
+    padding-top: 10px;
+}
+}
+</style>
+
+<div class="calculator">
+    <div class="calculator__fields">
+        <div class="calculator__field">
+            <div class="calculator__field-box">
+                <label for="monthly-sessions" class="field-label">Monthly Sessions</label>
+                <div class="rangevalue"><span class="form-range-value">200,000</span></div>
+            </div>
+            <input type="range" value="200000" min="50000" max="1000000" step="100" class="form-range" id="monthly-sessions" style="background: linear-gradient(to right, #FF5C00 0%, #FF5C00 15.740740740740744%, #F2F0EC 15.740740740740744%, white 100%)">
+        </div>
+
+        <div class="calculator__field">
+            <div class="calculator__field-box">
+                <label class="field-label" for="conversion-rate">Conversion Rate</label>
+                <div class="rangevalue"><span class="form-range-value">1.5</span>%</div>
+            </div>
+            <input type="range" value="1.5" min="0.05" max="15" step="0.01" class="form-range" id="conversion-rate" style="background: linear-gradient(to right, #FF5C00 0%, #FF5C00 9.466666666666667%, #F2F0EC 9.466666666666667%, white 100%)">
+        </div>
+        <div class="calculator__field">
+            <div class="calculator__field-box">
+                <label for="average-order-value" class="field-label">Average Order Value</label>
+                <div class="rangevalue">$<span class="form-range-value">126</span></div>
+            </div>
+            <input type="range" value="126" min="10" max="1000" step="1" class="form-range" id="average-order-value" style="background: linear-gradient(to right, #FF5C00 0%, #FF5C00 12.5%, #F2F0EC 12.5%, #F2F0EC 100%)">
+        </div>
+        <div class="calculator__revenue">
+            <div class="approx-annual-left"><span class="field-label">Approximated Annual Revenue</span></div>
+            <div class="approx-annual-right"><span class="field-label"></span><span class="usd">$<span class="annual-revenue">4,536,000</span> (USD)</span></div>
+        </div>
+    </div>
+
+    <div class="calculator__result">
+        <div class="field-label ab-test">A/B Test Impact</div>
+        <fieldset class="calculator__radios">
+            <div class="radios__box">
+            <input type="radio" id="impact-3" name="impact[]" value="0.03" class="revenue-radio" aria-labelledby="impact-3">
+                <label for="impact-3" class="revenue-label">
+                    
+                    <span>+3%</span>
+                </label>
+                 <input checked="" type="radio" id="impact-5" name="impact[]" value="0.05" class="revenue-radio" aria-labelledby="impact-5">
+                <label for="impact-5" class="revenue-label">
+                   
+                    <span>+5%</span>
+                </label>
+                <input type="radio" id="impact-10" name="impact[]" value="0.1" class="revenue-radio" aria-labelledby="impact-10">
+                <label for="impact-10" class="revenue-label">
+                    
+                    <span>10%</span>
+                </label>
+            </div>
+        </fieldset>
+        <span class="hr-class"><hr></span>
+        <p class="singlesuccess">A single successful A/B test can add <br/><span class="usd-per"><b>$<span class="test-impact">226,800</span></b> (USD)</span> annually. </p>
+        <p class="werun">We run lots of tests.</p>
+    </div>
+</div>
+<div><p class="calculator-tool" style="text-align: center;">This calculator is a tool, not a guarantee of results.</p></div>
+
+
+<!-- End Google Tag Manager (noscript) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+      var swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets: true,
+            },
+        breakpoints: {
+        // when window width is <= 499px
+        499: {
+            slidesPerView: 1,
+            spaceBetweenSlides: 30
+        },
+        // when window width is <= 999px
+        999: {
+            slidesPerView: 2,
+            spaceBetweenSlides: 40
+        }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
+  
+  var swiper2 = new Swiper(".swiper2", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination1",
+          clickable: true,
+            },
+        breakpoints: {
+        // when window width is <= 499px
+        499: {
+            slidesPerView: 1,
+            spaceBetweenSlides: 30
+        },
+        // when window width is <= 999px
+        999: {
+            slidesPerView: 2,
+            spaceBetweenSlides: 40
+        }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next1',
+      prevEl: '.swiper-button-prev1',
+    },
+  })
+  
+$(".filter__outline").click(function(){
+console.log("hello");
+swiper2.slideTo(0);
+});   
+</script>
+
+
+<script>
+    $('.form-range').on('change mousemove touchmove', function () {
+        $(this).parent().find('.form-range-value').text(numberWithCommas($(this).val()));
+
+        if($(this).attr('id') == 'conversion-rate'){
+            $(this).attr('style', 'background: linear-gradient(to right, #FF5C00 0%, #FF5C00 '+ $(this).val()/0.15 +'%, #F2F0EC ' + $(this).val()/0.15 + '%, white 100%)')
+        }else if($(this).attr('id') == 'average-order-value'){
+            $(this).attr('style', 'background: linear-gradient(to right, #FF5C00 0%, #FF5C00 '+ $(this).val()/10 +'%, #F2F0EC ' + $(this).val()/10 + '%, white 100%)')
+        }else if($(this).attr('id') == 'monthly-sessions'){
+            var modifier = ($(this).val()-50000)/900000
+            var lowerLimit = (50000*(1 - modifier))
+            var upperLimit = (900000*modifier)
+            var sessionsPercent = ((lowerLimit + upperLimit - 50000)/(900000))*100;
+            $(this).attr('style', 'background: linear-gradient(to right, #FF5C00 0%, #FF5C00 '+ sessionsPercent +'%, #F2F0EC ' + sessionsPercent + '%, white 100%)')
+        }
+        
+        croCalculator();
+
+    });
+
+    $('input[name="impact[]"]').on('change', function () {
+
+        var annualRevenue = croCalculator();
+        var testImpact = annualRevenue * $(this).val();
+        testImpact = testImpact.toFixed(0);
+        $('.test-impact').text(numberWithCommas(testImpact));
+
+    });
+
+    function croCalculator(){
+
+        var conversionRate = $('#conversion-rate').val();
+        var averageOrderValue = $('#average-order-value').val();
+        var monthlySessions = $('#monthly-sessions').val();
+
+        var annualRevenue = (conversionRate/100)*averageOrderValue*monthlySessions*12;
+        annualRevenue = annualRevenue.toFixed(0)
+
+        $('.annual-revenue').text(numberWithCommas(annualRevenue));
+
+        var testImpact = annualRevenue * $('input[name="impact[]"]:checked').val();
+        testImpact = testImpact.toFixed(0);
+        $('.test-impact').text(numberWithCommas(testImpact));
+
+        return annualRevenue;
+
+    }
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+
+
+  // Create a GSAP timeline
+    const timeline = gsap.timeline({ repeat: -1, paused: false }); // Set repeat to -1 for continuous looping
+
+    // Add animations to the timeline
+    timeline.to("#circle1", { opacity: 1, duration: 0, ease: "none" });
+    timeline.to("#circle1", { opacity: 0, duration: 0, ease: "none", delay: 1.5});
+timeline.to("#circle2", { opacity: 1, duration: 0, ease: "none" }, "<");
+    timeline.to("#circle2", { opacity: 0, duration: 0, ease: "none", delay: 1.5});
+timeline.to("#circle3", { opacity: 1, duration: 0, ease: "none" }, "<");
+    timeline.to("#circle3", { opacity: 0, duration: 0, ease: "none", delay: 1.5});
+timeline.to("#circle4", { opacity: 1, duration: 0, ease: "none" }, "<");
+    timeline.to("#circle4", { opacity: 0, duration: 0, ease: "none", delay: 1.5});
+timeline.to("#circle5", { opacity: 1, duration: 0, ease: "none" }, "<");
+ timeline.to("#circle5", { opacity: 0, duration: 0, ease: "none", delay: 1.5});
+
+
+
+    // Hover triggers
+    const hoverTriggers = document.querySelectorAll(".hover-trigger");
+    hoverTriggers.forEach((trigger, index) => {
+      trigger.addEventListener("mouseenter", () => {
+        timeline.pause();
+        timeline.seek(index * 1.5); // Go to the corresponding part of the animation
+      });
+
+      trigger.addEventListener("mouseleave", () => {
+        timeline.play();
+      });
+    });
+
+    // Start the timeline
+    timeline.play();
+</script>
